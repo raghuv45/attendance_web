@@ -12,9 +12,14 @@ angular.module('mantraattendanceApp')
 
   	$scope.domainError = false;
 
+    if(localStorage.getItem("token")){
+        $location.path('/home');
+    }
+
+
     $scope.login = function (data) {
     	console.log("data",data)
-    	if(!$scope.domainError && $scope.inputform.$valid){
+    	// if(!$scope.domainError && $scope.inputform.$valid){
     		userService.login(data).then(function(response){
     			console.log("response",response)
 				localStorage.setItem('token',response.token);
@@ -22,20 +27,20 @@ angular.module('mantraattendanceApp')
 			}).catch(function(err){
 				  $scope.error = err.message;
 		  	});
-    	}
+    	// }
     	console.log("data",data)
     }
 
-    $scope.validateDomain = function (data){
-    	if(data)
-    		var domain = data.split('@')[1];
-    	if(domain){
-	    	if (domain == 'gmail.com'){
-	    		$scope.domainError = false;
-	    	}else{
-	    		$scope.domainError = true;
-	    	}
-    	}
-    }
+    // $scope.validateDomain = function (data){
+    // 	if(data)
+    // 		var domain = data.split('@')[1];
+    // 	if(domain){
+	   //  	if (domain == 'gmail.com'){
+	   //  		$scope.domainError = false;
+	   //  	}else{
+	   //  		$scope.domainError = true;
+	   //  	}
+    // 	}
+    // }
 
   });

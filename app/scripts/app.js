@@ -46,11 +46,7 @@ angular
         auth: (['$q', '$location', function ($q, $location) {
         var defer = $q.defer();
         if (localStorage.getItem('token')) {
-          defer.resolve({
-            user: function() {
-                return JSON.parse(localStorage.getItem("token"));
-            }
-          });
+          defer.resolve();
         } else {
           defer.reject();
           $location.path("#/login");
@@ -68,12 +64,12 @@ angular
       .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'homeCtrl',
-        // resolve:resolve
+        resolve:resolve
       })
       .when('/user', {
         templateUrl: 'views/user.html',
         controller: 'userCtrl',
-        // resolve:resolve
+        resolve:resolve
       })
       .otherwise({
         redirectTo: '/login'

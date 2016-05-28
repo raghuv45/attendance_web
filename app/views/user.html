@@ -1,1 +1,22 @@
 {{userDetails}}
+<div class="table-responsive custom-responsive">
+  <table class="table styleone-table clearfix">
+     <caption class="workflow-head-label">Users List</caption>
+      <thead class="clearfix">
+          <tr class="clearfix">
+            <th class="text-uppercase workflow-candidate-name">Date</th>
+            <th class="text-uppercase">LoginTime</th>
+            <th class="text-uppercase">LogOutTime</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat = "user in userDetails.attendance track by $index"  class="clist clearfix">
+            <td  class="workflow-candidate-name-val" style="padding-left:0px;">
+              <span><a href="#/user?{{user.id}}">{{user.date || date}}</a></span>
+            </td>
+            <td><span>{{user.loginTime || date}}</span></td>
+            <td><span>{{user.logoutTime || date}}</span></td>
+        </tr>
+      </tbody>
+  </table>
+</div>

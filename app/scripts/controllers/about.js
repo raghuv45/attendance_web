@@ -43,6 +43,6 @@ angular.module('mantraattendanceApp')
   		$location.path('/user' + '?' + user.id)
   	}
 
-  	$scope.users = [{"email":"raghu1","status":"closed","id":"123456"},{"email":"raghu","status":"open","id":"123456"}
-  	]
+  	// $scope.users = [{"email":"raghu1","status":"closed","id":"123456"},{"email":"raghu","status":"open","id":"123456"}
+  	// ]
   });

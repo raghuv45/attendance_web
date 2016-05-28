@@ -27,7 +27,7 @@ angular.module('mantraattendanceApp')
 
     this.getUserDetails = function (user) {
       var deferred = $q.defer();
-      $http.get('/api/admin/user-details' + user.id)
+      $http.get('/api/admin/user-details/' + user.id)
       .success(function(response){
         deferred.resolve(response);
       })
@@ -61,7 +61,7 @@ angular.module('mantraattendanceApp')
       return deferred.promise;
     }
 
-    this.deleteUser = function (user) {
+    this.getCancelled = function (user) {
       var deferred = $q.defer();
       $http.get('/api/get-cancelled')
       .success(function(response){
