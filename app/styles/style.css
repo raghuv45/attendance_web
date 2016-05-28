@@ -1,0 +1,65 @@
+body{
+	font-size: 16px;
+}
+.jumbotron{
+	text-align: center;
+	margin: 85px 0 0;
+}
+.panel-body{
+	background-color: #e5e3e0;
+    padding: 25px 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.field-labels{
+	width: 130px;
+	display: inline-block;
+	padding-left: 10px;
+	margin-bottom: 20px;
+}
+.header{
+	width: 400px;
+	margin: 200px auto;
+	background-color: #e5e3e0;
+}
+.padding-all{
+	padding: 15px;
+}
+.login-head{
+	display: block;
+	text-align: center;
+}
+.email-block{
+
+}
+.text-center{
+	text-align: center;
+}
+input{
+	padding-left: 10px;
+	width: 200px;
+	height: 30px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+}
+.submit-btn{
+	/*width: 200px;*/
+	cursor: pointer;
+	padding: 10px 20px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: none;
+	border : none;
+	background-color: #a4a4a4;
+	color: #fff;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+.err-msg{
+	text-align: center;
+    color: red;
+    margin-bottom: 5px;
+    margin-left: 100px;
+}

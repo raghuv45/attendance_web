@@ -1,0 +1,26 @@
+<div class="table-responsive custom-responsive">
+  <table class="table styleone-table clearfix">
+     <caption class="workflow-head-label">Users List</caption>
+      <thead class="clearfix">
+          <tr class="clearfix">
+            <th class="text-uppercase workflow-candidate-name">Email</th>
+            <th class="text-uppercase">Status</th>
+            <th class="text-uppercase">Action</th>
+            <!-- <th class="text-uppercase">Assigned To</th> -->
+          </tr>
+      </thead>
+      <tbody>
+        
+        <tr ng-repeat = "user in users track by $index"  class="clist clearfix">
+            <td  class="workflow-candidate-name-val" style="padding-left:0px;">
+              <span><a href="#/user?{{user.id}}">{{user.email}}</a></span>
+            </td>
+            <td><span>{{user.status}}</span></td>
+            <td>
+            	<span ng-if="user.status == 'open'"><button ng-click="acceptUser(user.id,$index)">Accept</button><button ng-click="deleteUser(user.id,$index)">Reject</button></span>
+            	<button ng-if="user.status == 'closed'" ng-click="deleteUser(user.id,$index)">Remove</button>
+            </td>
+        </tr>
+      </tbody>
+  </table>
+</div>

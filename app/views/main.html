@@ -1,0 +1,43 @@
+<!-- <div class="jumbotron panel-body pull-right"> -->
+  <div class="header">
+    <label for="" class="login-head padding-all">Login</label>
+    <form name="inputform" novalidate>
+      <div class="email-block">
+        <label for="" class="field-labels">Email</label>
+        <input type="email" name="email" ng-model="logindata.email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/i"    ng-change="validateDomain(logindata.email)" required>
+        <div class="error-msg-block" ng-show="!inputform.email.$error.required && inputform.email.$dirty && inputform.email.$error.pattern  && inputform.email.$touched">          
+             <div class="err-msg">
+               Invalid email address
+             </div>
+        </div>
+        <div class="error-msg-block" ng-show="inputform.email.$error.required && inputform.email.$dirty">
+             <div class="err-msg" style="margin-left: 147px;text-align: left;">
+                Required
+             </div>
+        </div> 
+      </div>
+      <div ng-if="domainError && !inputform.email.$error.required" class="err-msg">Domain should be mantralabs</div>
+      <div class="form-group mobile padd-off pull-right error-relative">
+        <label for="" class="field-labels">Password</label>
+        <input type="password" class="form-control field-input" name="password" ng-pattern="/^\d+$/" ng-minlength="6" ng-maxlength="20"  ng-model="logindata.password" placeholder="" ng-model-options="{ updateOn: 'blur' }" required>
+        <div ng-show="!inputform.password.$error.required && (inputform.password.$error.minlength || inputform.password.$error.maxlength) && inputform.password.$dirty" class="error-msg-block"  id="number-error-msg">
+             <div class="err-msg">
+                Passwords must be between 6 and 20 characters.
+             </div>
+        </div>
+        <div class="error-msg-block" ng-show="inputform.mobile.$error.required && inputform.mobile.$dirty">
+           <div class="err-msg" style="margin-left: 147px;text-align: left;">
+              Required
+           </div>
+        </div> 
+      </div>
+      <div class="text-center">
+        <button ng-click="login(logindata)" class="submit-btn" ng-disabled="submittedLogin || inputform.$invalid">Submit</button>
+      </div>
+      
+    </form>
+  </div>
+<!-- </div> -->
+
+
+ 
