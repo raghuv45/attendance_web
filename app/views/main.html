@@ -18,9 +18,9 @@
         </div> 
       </div>
       <div ng-if="domainError && !inputform.email.$error.required" class="err-msg">Domain should be mantralabs</div>
-      <div class="form-group mobile padd-off pull-right error-relative">
+      <div class="form-group mobile padd-off error-relative">
         <label for="" class="field-labels">Password</label>
-        <input type="password" class="form-control field-input" name="password" ng-pattern="/^\d+$/" ng-minlength="6" ng-maxlength="20"  ng-model="logindata.password" placeholder="" ng-model-options="{ updateOn: 'blur' }" required>
+        <input type="password" class="field-input" name="password" ng-pattern="/^\d+$/" ng-minlength="6" ng-maxlength="20"  ng-model="logindata.password" placeholder="" ng-model-options="{ updateOn: 'blur' }" required>
         <div ng-show="!inputform.password.$error.required && (inputform.password.$error.minlength || inputform.password.$error.maxlength) && inputform.password.$dirty" class="error-msg-block"  id="number-error-msg">
              <div class="err-msg">
                 Passwords must be between 6 and 20 characters.

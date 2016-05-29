@@ -1,4 +1,24 @@
-{{userDetails}}
+<div class="container">
+  <div class="heading text-center">
+      Users List
+  </div>
+  <div class="table-container clearfix">
+    <div class="table-head col-md-12">
+      <div class="record col-md-4">Date</div>
+      <div class="record col-md-4">LoginTime</div>
+      <div class="record col-md-4">LogOutTime</div>
+    </div>
+    <div class="table-content col-md-12" ng-repeat = "user in userDetails.attendance track by $index">
+      <div class="record col-md-4 ptr"><a href="#/user?{{user.id}}">{{user.date || date}}</a></div>
+      <div class="record col-md-4">{{user.loginTime || date}}</div>
+      <div class="record col-md-4 ">
+        {{user.logoutTime || date}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- {{userDetails}}
 <div class="table-responsive custom-responsive">
   <table class="table styleone-table clearfix">
      <caption class="workflow-head-label">Users List</caption>
@@ -19,4 +39,4 @@
         </tr>
       </tbody>
   </table>
-</div>
+</div> -->

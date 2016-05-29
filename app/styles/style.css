@@ -1,6 +1,9 @@
 body{
 	font-size: 16px;
 }
+.ptr{
+	cursor: pointer;
+}
 .jumbotron{
 	text-align: center;
 	margin: 85px 0 0;
@@ -62,4 +65,23 @@ input{
     color: red;
     margin-bottom: 5px;
     margin-left: 100px;
+}
+.heading{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 30px; 
+}
+.table-container{
+  width: 800px;
+  margin: 0 auto;
+}
+.table-container a{
+	text-decoration: none;
+}
+.table-head{
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+.accept-btn, .rej-btn{
+	margin-right: 10px;
 }

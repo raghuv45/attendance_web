@@ -1,4 +1,25 @@
-<div class="table-responsive custom-responsive">
+
+<div class="container">
+  <div class="heading text-center">
+      Users List
+  </div>
+  <div class="table-container clearfix">
+    <div class="table-head col-md-12">
+      <div class="record col-md-5">Email</div>
+      <div class="record col-md-3">Status</div>
+      <div class="record col-md-4">Action</div>
+    </div>
+    <div class="table-content col-md-12" ng-repeat = "user in users track by $index">
+      <div class="record col-md-5 ptr"><a href="#/user?{{user.id}}">{{user.email}}</a></div>
+      <div class="record col-md-3">{{user.status}}</div>
+      <div class="record col-md-4 ">
+        <span ng-if="user.status == 'open'"><button class="btn accept-btn" ng-click="acceptUser(user.id,$index)">Accept</button><button class="btn rej-btn"ng-click="deleteUser(user.id,$index)">Reject</button></span>
+              <button class="btn" ng-if="user.status == 'closed'" ng-click="deleteUser(user.id,$index)">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="table-responsive custom-responsive">
   <table class="table styleone-table clearfix">
      <caption class="workflow-head-label">Users List</caption>
       <thead class="clearfix">
@@ -6,7 +27,6 @@
             <th class="text-uppercase workflow-candidate-name">Email</th>
             <th class="text-uppercase">Status</th>
             <th class="text-uppercase">Action</th>
-            <!-- <th class="text-uppercase">Assigned To</th> -->
           </tr>
       </thead>
       <tbody>
@@ -23,4 +43,4 @@
         </tr>
       </tbody>
   </table>
-</div>
+</div> -->
