@@ -42,6 +42,10 @@ angular.module('mantraattendanceApp')
   		console.log("sdsdg")
   		$location.path('/user' + '?' + user.id)
   	}
+    $scope.logout = function(){
+      localStorage.clear();
+      $location.path("/login");
+    }
 
   	// $scope.users = [{"email":"raghu1","status":"closed","id":"123456"},{"email":"raghu","status":"open","id":"123456"}
   	// ]

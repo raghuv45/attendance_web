@@ -109,6 +109,7 @@ module.exports = function (grunt) {
          {
            context: '/api/',
            host: '127.0.0.1',
+           // host: 'http://apiattendance.rakeshmakam.com',
            https: false,
            port: 1337,
            rewrite: {
