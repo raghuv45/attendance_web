@@ -9,10 +9,10 @@
       <div class="record col-md-4">LogOutTime</div>
     </div>
     <div class="table-content col-md-12" ng-repeat = "user in userDetails.attendance track by $index">
-      <div class="record col-md-4 ptr"><a href="#/user?{{user.id}}">{{user.date || date}}</a></div>
-      <div class="record col-md-4">{{user.loginTime || date}}</div>
+      <div class="record col-md-4 ptr"><a href="#/user?{{user.id}}">{{user.date | date:'MM/dd/yyyy HH:mm:ss'}}</a></div>
+      <div class="record col-md-4">{{user.loginTime | date:'MM/dd/yyyy HH:mm:ss'}}</div>
       <div class="record col-md-4 ">
-        {{user.logoutTime || date}}
+        {{user.logoutTime | date:'MM/dd/yyyy HH:mm:ss'}}
       </div>
     </div>
   </div>
